@@ -10,7 +10,7 @@ use rayon::iter::{IntoParallelRefIterator as _, ParallelIterator as _};
 use std::{fmt::Debug, iter::Sum, str::FromStr};
 
 /// Functions that operate on the lists require items to satisfy this trait bound.
-pub(crate) trait Item: Integer + Copy + 'static {}
+trait Item: Integer + Copy + 'static {}
 impl<T> Item for T where T: Integer + Copy + 'static {}
 
 /// Integer type list items are stored/parsed as.
@@ -78,7 +78,7 @@ mod tests {
     use super::{list_distance, parse_lists, similarity_score, ItemInt};
     use num::cast::AsPrimitive as _;
 
-    pub(crate) fn generate_input(len: usize) -> String {
+    fn generate_input(len: usize) -> String {
         let mut input = String::new();
         for _ in 0..len {
             let rand_item = || rand::random::<u16>();

@@ -9,11 +9,11 @@ pub(crate) mod strict;
 mod tolerant;
 
 /// Functions that operate on reports require levels to satisfy this trait bound.
-pub(crate) trait Level: Integer + Copy + 'static {}
+trait Level: Integer + Copy + 'static {}
 impl<T> Level for T where T: Integer + Copy + 'static {}
 
 /// Integer type levels are stored/parsed as.
-pub(crate) type LevelInt = u32;
+type LevelInt = u32;
 
 /// Solve both parts and print results to standard output.
 fn main() {
@@ -38,7 +38,7 @@ fn parse_reports(input: &str) -> Vec<Vec<LevelInt>> {
 }
 
 #[cfg(test)]
-pub(crate) mod tests {
+mod tests {
     use crate::{parse_reports, strict, tolerant};
     use itertools::Itertools;
     use rand::Rng;
