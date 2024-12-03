@@ -66,7 +66,6 @@ cargo test --bin day1
 ## Benchmarking
 
 I have provided basic [benchmark tests](https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html) for the most important parts of the solutions.
-These benchmarks only run on challenge inputs. Proper benchmarks would use randomized inputs for more accuracy.
 
 You can test the performance of each solution by running `cargo bench` in a challenge directory
 
