@@ -50,34 +50,20 @@ cargo doc --open
 I have provided basic tests for each solution.
 These cover the sample inputs provided in each challenge, as well as additional test cases I used to verify the correctness of the solutions during implementation.
 
-The solutions can be tested by running `cargo test` in a challenge directory
+The solutions can be tested by running `cargo test` on the repository.
 
 ```bash
-cd day1
 cargo test
-```
-
-or by specifying the binary directly.
-
-```bash
-cargo test --bin day1
 ```
 
 ## Benchmarking
 
 I have provided basic [benchmark tests](https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html) for the most important parts of the solutions.
 
-You can test the performance of each solution by running `cargo bench` in a challenge directory
+You can test the performance of the solutions by running `cargo bench` on the repository.
 
 ```bash
-cd day1
 cargo bench
-```
-
-or by specifying the binary directly.
-
-```bash
-cargo bench --bin day1
 ```
 
 You're welcome to analyze the implementation of the benchmarking code and the solutions themselves. Benchmarking functions are marked with the `#[bench]` attribute.
