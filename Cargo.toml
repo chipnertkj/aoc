@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["abs-diff", "day1", "day2", "input"]
+
+[workspace.dependencies]
+input = { path = "input" }
+abs-diff = { path = "abs-diff" }
+rayon = "1.10.0"
+num = "0.4.3"
+itertools = "0.13.0"
+rand = "0.8.5"
+
+eyre = "0.6.12"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["fmt", "env-filter"] }
+thiserror = "2.0.4"
