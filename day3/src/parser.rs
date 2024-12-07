@@ -77,19 +77,9 @@ where
     // Peek forward and parse operations.
     loop {
         // Attempt to peek the next operation.
-        match peek(ops_parser)(input) {
-            // Operation found and parsed successfully.
-            // Add operation to list and continue from remainder of peek.
-            Ok((peek_remainder, op)) => {
-                ops.push(op);
-                input = peek_remainder;
-            }
-            // Incomplete input.
-            // There are no more operations until end of input.
-            Err(nom::Err::Incomplete(_)) => return ops,
-            // Invalid input, ignore.
-            // This is ok, we are expecting noisy input!
-            Err(_) => {}
+        if let Ok((peek_remainder, op)) = peek(ops_parser)(input) {
+            ops.push(op);
+            input = peek_remainder;
         };
         // Skip one character and attempt to peek at next iteration.
         match skip_one(input) {
