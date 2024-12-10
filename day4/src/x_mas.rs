@@ -1,10 +1,5 @@
 //! Part 2 implementation.
 
-// BITCH you're telling me NOW that I got the instructions wrong...?
-// The hell is an `X-MAS` puzzle anyway...
-//
-// (For clarity, this is targeted at a fictional character. ...And I'm not actually upset. -w-)
-
 use crate::transform;
 
 /// Find all occurences of `X-MAS` (two `MAS` in the shape of an `X`).

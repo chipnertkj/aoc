@@ -58,12 +58,12 @@ cargo test
 
 ## Benchmarking
 
-I have provided basic [benchmark tests](https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html) for the most important parts of the solutions.
+I have provided basic [benchmark tests](https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html) for some of the solutions.
 
-You can test the performance of the solutions by running `cargo bench` on the repository.
+You can run the benchmarks by running `cargo bench` on the repository.
 
 ```bash
 cargo bench
 ```
 
-You're welcome to analyze the implementation of the benchmarking code and the solutions themselves. Benchmarking functions are marked with the `#[bench]` attribute.
+You're welcome to analyze the implementation of the benchmarking code and the solutions themselves. All benchmarking functions are marked with the `#[bench]` attribute.
